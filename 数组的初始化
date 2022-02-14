@@ -2,7 +2,16 @@ int main()
 {
 	int arr1[10] = { 1,2,3 };//不完全初始化，剩下的元素默认为0
 	char arr2[5] = {'a','b'};//数组只能读取数字，所以字母要用''括起来——ASCII码值
-	char arr3[5] = "ab";//第三个元素的0是'\0'表示的0
-	printf("%s\n", arr2);
+	char arr3[5] = "ab";//5个空间，只有两个被赋值，其余系统赋值（乱码——烫烫烫烫）
+	char arr4[] = "abcdef";
+	//printf("%s\n", arr3);
+	printf("%d\n", sizeof(arr4));
+	//sizeof 计算arr4所占空间的大下（计算了\0）
+	//7个元素——char 7*1=7
+	printf("%d\n", strlen(arr4));
+	//strlen 求字符串长度
+	//[a b c d e f \0]
+	//strlen——'\0'之前的字符个数
+	//6
 	return 0;
 }

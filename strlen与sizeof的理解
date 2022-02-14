@@ -1,0 +1,12 @@
+//strlen: 求字符串长度 - 只能针对字符串求长度 - 库函数 - 使用得引用头文件
+//sizeof ：计算变量，数组，类型的大小 - 单位是字节 - 操作符
+int main()
+{
+	char arr1[] = "abc";
+	char arr2[] = { 'a','b','c' };
+	printf("%d\n", sizeof(arr1));
+	printf("%d\n", sizeof(arr2));
+	printf("%d\n", strlen(arr1));
+	printf("%d\n", strlen(arr2));//arr2 里边没有'\0'所以结果是随机值
+	return 0;
+}
